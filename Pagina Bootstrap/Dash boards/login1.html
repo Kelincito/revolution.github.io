@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Iniciar Sesion</title>
+    
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!--Logo inicio pestaña-->
+    <link rel="icon" type="image/png" href="image/LOGO_Empresa.png">
+
+    <!-- Nuestro css-->
+    <link rel="stylesheet" type="text/css" href="proyecto.css" th:href="proyecto.css}">
+
+</head>
+<body>
+    <div class="modal-dialog text-center">
+        <div class="col-sm-10 main-section">
+            <div class="modal-content">
+                <div class="col-12 user-img">
+                    <a href="http://127.0.0.1:5500/Pagina%20Bootstrap/index.html"><img src="administrador.png" th:src="administrador"/></a>
+                </div>
+                <form class="col-12" id="login" th:action="login" method="get">
+                    <div class="form-group" id="user-group">
+                        <input type="text" id="nombre" class="form-control" placeholder="User" onkeypress="return valideKey(event);"/>
+                    </div>
+                    <div class="form-group" id="contrasena-group">
+                        <input type="password" id="password" class="form-control" placeholder="Password"/>
+                    </div>
+                    <button type="submit"  class="btn btn-danger"  onclick= "validation()" value="ingresar" id="ingresar"></i>  Ingresar </button>
+                </form>
+                <div class="col-12 forgot">
+                    <a href="recuperar.html">¿Recordar contraseña?</a>
+                    <br>
+                    <a href="registrar.html">Registarse?</a>
+                </div>
+                <p></p>
+		        </div>
+                
+            </div>
+
+<Script>
+
+    Window.alert("Inicio de session de hot dog y mas")
+
+function validation (){
+    //validacion de usuario
+    var nombre = document.getElementById("nombre").value;
+    var password = document.getElementById("password").value;
+
+    //verificacion de campos
+    if(nombre=="")
+        alert("Digite su nombre de usuario")
+
+    if(password=="")
+        alert("Digite su contraseña")  
+
+    //consicional para l acontrasea usuario
+    if (nombre == "123" && password == "y123"){
+        alert ("Bienvenido");
+        window.location = "Ingresoadmin.html";
+    return false;
+}
+if (nombre == "admin" && password == "admin123"){
+    alert ("Bienvenido");
+    window.location = "inventarionuevo.html";
+return false;
+}
+if (nombre == "empleado1" && password == "empleado1"){
+    alert ("Bienvenido ");
+    window.location = "index.html";
+return false;
+}
+if (nombre == "cliente1" && password == "cliente1"){
+    alert ("Bienvenido cliente");
+    window.location.href = "reservas.html";
+return false;
+}
+}
+
+
+
+
+
+</Script>
+
+        </div>
+    </div>
+</body>
+</html>

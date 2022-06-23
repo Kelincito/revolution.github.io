@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registro</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="proyecto.css" th:href="proyecto.css}">
+
+</head>
+<body>
+    <div class="modal-dialog text-center">
+        <div class="col-sm-10 main-section">
+            <div class="modal-content">
+                <div class="col-12 user-img">
+                    <a href="login1.html"><img src="administrador.png" th:src="administrador"/></a>
+                </div>
+                <form class="col-12" th:action="login" method="get">
+                    <div class="form-group2" id="user-group">
+                        <input type="text" id="nombre" class="form-control" placeholder="Nombre" name="username" required/>
+                    </div>
+                    <br>
+                    <div class="form-group2" id="user-group">
+                        <input type="text" id="apellido" class="form-control" placeholder="Apellido" name="username" required/>
+                    </div>
+                    <br>
+                    <div class="form-group2" id="user-group">
+                        <input type="email" id="email" class="form-control" placeholder="Diguite su Email" name="email" required/>
+                    </div>
+                    <br>
+                    <div class="form-group2" id="user-group">
+                        <input type="number" id="numero" class="form-control" placeholder="Numero de contacto" name="num" required/>
+                    </div>
+                    <br>
+                    <div class="form-group2" id="user-group">
+                        <input type="text" id="username" class="form-control" placeholder="Nombre de usuario" name="username" required/>
+                    </div>
+                    <br>
+                    <div class="form-group2" id="contrasena-group">
+                        <input type="password" id="contraseña" class="form-control" placeholder="Contrasena" name="password" required/>
+                    </div>
+                    <br>
+                    <div class="form-group2" id="contrasena-group">
+                        <input type="text" id="contraseña2" class="form-control" placeholder="Confirmar Contraseña" name="password" required/>
+                    </div>
+                    <br>
+                    <div class="form-group2" id="user-group" required>
+                      <select class="form-control" id="genero"  name="username">
+                        <option value="">Estado de cuenta</option>
+                        <option value=""></option>
+                        <option value="Hombre">Cliente</option>
+                        <option value="Mujer">Empleado</option>
+                        <option value="Binario">administrador</option>
+                        <option value="Otro">Otro</option>
+                      </select>
+                    </div>
+                   <br>
+                   <a href="login1.html"><button type="submit" onclick="funcion2()" class="btn btn-danger"><i class="fas fa-sign-in-alt"></i>  Registrar </button></a> 
+                </form>
+                <p></p>
+		        </div>
+            </div>
+        </div>
+    </div>
+</body>
+<Script>
+    window.alert("Que esperas para registrarte")
+        function funcion2 (){
+    //validacion de usuario
+    var nombre = document.getElementById("nombre").value;
+    var apellido = document.getElementById("apellido").value;
+    var email = document.getElementById("email").value;
+    var numero = document.getElementById("numero").value;
+    var username = document.getElementById("username").value;
+    var contraseña = document.getElementById("contraseña").value;
+    var contraseña2 = document.getElementById("contraseña2").value;
+    var genero = document.getElementById("genero").value;
+
+    //verificacion de campos
+    if(nombre=="")
+        alert("Digite su nombre")
+    if(apellido=="")
+        alert("Digite su Apellido")
+    if(email=="")
+        alert("Digite su Email")
+        if(numero=="")
+        alert("Digite su numero telefonico")
+        if(username=="")
+        alert("Digite tu nombre de usuario")
+        if(contraseña=="")
+        alert("Ingresa tu contraseña")
+        if(contraseña2=="")
+        alert("Confirma tu contraseña")
+        if(genero=="")
+        alert("valida tu genero")
+        }
+    
+
+
+
+
+
+
+</Script>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Reservas</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="proyecto.css" th:href="proyecto.css}">
+
+</head>
+<body>
+    <div class="modal-dialog text-center">
+        <div class="col-sm-10 main-section">
+            <div class="modal-content">
+                <div class="col-12 user-img">
+                    <a href="login1.html"><img src="administrador.png" th:src="administrador"/></a>
+                </div>
+                <form class="col-12" th:action="login" method="get">
+                    <div class="form-group2" id="user-group">
+                        <input type="text" id="nombre" class="form-control" placeholder="Nombre" name="username" required/>
+                    </div>
+                    <br>
+                    <div class="form-group2" id="user-group">
+                        <input type="text" id="apellido" class="form-control" placeholder="Apellido" name="username" required/>
+                    </div>
+                    <br>
+                    <div class="form-group2" id="user-group">
+                        <input type="number" id="documento" class="form-control" placeholder="Diguite su tipo de documento" name="number" required/>
+                    </div>
+                    <br>
+                    <div class="form-group2" id="user-group">
+                        <input type="number" id="numero" class="form-control" placeholder="Numero de contacto" name="num" required/>
+                    </div>
+                    <br>
+                    <div class="form-group2" id="user-group">
+                        <input type="date" id="fecha" class="form-control" placeholder="Ingrese fechadel evento" name="date" required/>
+                    </div>
+                    <br>
+                    <div class="form-group2" id="user-group">
+                        <input type="time" id="hora" class="form-control" placeholder="Ingrese hora" name="time" required/>
+                    </div>
+        
+                    <br>
+                    <div class="form-group2" id="user-group" required>
+                      <select class="form-control" id="sede"  name="username">
+                        <option value="">Ingrese Sede</option>
+                        <option value=""></option>
+                        <option value="Hombre">Norte</option>
+                        <option value="Mujer">Cruces</option>
+                        <option value="Binario">Domicilio</option>
+                        <option value="Otro">Otro</option>
+                      </select>
+                    </div>
+                   <br>
+                   <div class="form-group2" id="user-group">
+                    <label for="Reglas">Acepta las condiciones de Reservas</label>
+                    <input type="checkbox" id="condiciones" class="form-control" placeholder="" required/>
+                </div>
+                <br>
+                    <button type="submit" class="btn btn-danger" onclick="funcion()"><i class="fas fa-sign-in-alt"></i>  Enviar Peticion </button>
+                </form>
+                <p></p>
+		        </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+ window.alert("Reserva tu cita :)")
+        function funcion(){
+    //validacion de usuario
+    var nombre = document.getElementById("nombre").value;
+    var apellido = document.getElementById("apellido").value;
+    var documento = document.getElementById("documento").value;
+    var numero = document.getElementById("numero").value;
+    var fecha = document.getElementById("fecha").value;
+    var hora = document.getElementById("hora").value;
+    var sede = document.getElementById("sede").value;
+    var condiciones = document.getElementById("condiciones").value;
+
+    //verificacion de campos
+    if(nombre=="")
+        alert("Digite su nombre")
+    if(apellido=="")
+        alert("Digite su Apellido")
+    if(documento=="")
+        alert("Digite su numero de documeto")
+        if(numero=="")
+        alert("Digite su numero telefonico")
+        if(fecha=="")
+        alert("Digite la fecha de la reserva")
+        if(hora=="")
+        alert("Ingresa la hora que deseas gestionar la reserva")
+        if(sede=="")
+        alert("Confirma la sede de tu preferencia")
+        if(condiciones=="")
+        alert("confirma la reserva")
+        }
+
+</script>
+</html>

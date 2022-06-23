@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Iniciar Sesion</title>
+
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!-- Nuestro css-->
+    <link rel="stylesheet" type="text/css" href="proyecto.css" th:href="proyecto.css}">
+
+</head>
+<body>
+    <div class="modal-dialog text-center">
+        <div class="col-sm-10 main-section">
+            <div class="modal-content">
+                <div class="col-12 user-img">
+                   <a href="http://127.0.0.1:5500/Pagina%20Bootstrap/index.html"><img src="administrador.png" th:src="administrador"/></a> 
+                </div>
+                <form class="col-12" th:action="login" method="get">
+                    <div class="form-group" id="user-group">
+                        <input type="text" class="form-control" id="recuper" placeholder="User Name" name="username"/>
+                    </div>
+                    <button type="submit" class="btn btn-danger" onclick="funcion()"><i class="fas fa-sign-in-alt"></i>  Recuperar </button>
+                </form>
+                <p></p>
+		        </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.alert("Bienvenido a recuperar tu cuenta")
+        function funcion (){
+    //validacion de usuario
+    var recuper = document.getElementById("recuper").value;
+
+    //verificacion de campos
+    if(recuper=="")
+        alert("Digite en nombre de usuaRio que quiera recuperar, GRACIAS...")
+        }
+    </script>
+</body>
+</html>
